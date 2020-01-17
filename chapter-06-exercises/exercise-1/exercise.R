@@ -49,4 +49,4 @@ sum_round <- sum(round_1, round_2)
 # Which is bigger, `round_sum` or `sum_round`? (You can use the `max()` function!)
 max <- max(round_sum, sum_round)
 
-# the result is that theyy are same.
+# the result is that they are same.
