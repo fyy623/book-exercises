@@ -52,3 +52,11 @@ summarize(to_sea, avg_delayed = mean(delayed_in_air, na.rm = TRUE))
 # (without showing any other data)!
 result <- flights %>% filter(dest == "SEA" & origin == "JFK") %>% summarise(mean(air_time, na.rm = TRUE), min(air_time, na.rm = TRUE), max(air_time, na.rm = TRUE))
 print(result)
+
+
+
+
+flights <- flights %>% 
+  mutate(gain_in_air = arr_delay - dep_delay) %>% 
+  arrange(desc(gain_in_air))
+View(flights)
