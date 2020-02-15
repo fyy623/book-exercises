@@ -37,7 +37,7 @@ data <- fromJSON(body)
 
 
 # What kind of data structure did this produce? A data frame? A list?
-data
+typeof(data)
 
 # Manually inspect the returned data and identify the content of interest 
 # (which are the movie reviews).
@@ -45,11 +45,14 @@ data
 names(data)
 
 # Flatten the movie reviews content into a data structure called `reviews`
-
+flatten(data)
 
 # From the most recent review, store the headline, short summary, and link to
 # the full article, each in their own variables
-
+headline <- data$headline
+short <- data$short
+link <- data$link
 
 # Create a list of the three pieces of information from above. 
+list <- list("headline" = headline, "short" = short ,"link" = link)
 # Print out the list.
